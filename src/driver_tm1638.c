@@ -85,18 +85,23 @@ static uint8_t a_high_low_shift(uint8_t data)
  */
 static uint8_t a_tm1638_write(tm1638_handle_t *handle, uint8_t cmd, uint8_t *buf, uint16_t len)
 {
+    uint8_t inner_buffer[32];
     uint16_t i;
     
-    for (i = 0; i < len; i++)                                           /* loop all */
+    if (len > 32)                                                            /* check len */
     {
-        buf[i] = a_high_low_shift(buf[i]);                              /* shift */
+        return 1;                                                            /* return error */
     }
-    if (handle->spi_write(a_high_low_shift(cmd), buf, len) != 0)        /* write data */
+    for (i = 0; i < len; i++)                                                /* loop all */
     {
-        return 1;                                                       /* return error */
+        inner_buffer[i] = a_high_low_shift(buf[i]);                          /* shift */
+    }
+    if (handle->spi_write(a_high_low_shift(cmd), inner_buffer, len) != 0)    /* write data */
+    {
+        return 1;                                                            /* return error */
     }
     
-    return 0;                                                           /* success return 0 */
+    return 0;                                                                /* success return 0 */
 }
 
 /**
