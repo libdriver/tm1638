@@ -8,7 +8,7 @@
 
 [![MISRA](https://img.shields.io/badge/misra-compliant-brightgreen.svg)](/misra/README.md) [![API](https://img.shields.io/badge/api-reference-blue.svg)](https://www.libdriver.com/docs/tm1638/index.html) [![License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](/LICENSE)
 
-TM1638是一种带键盘扫描接口的LED（发光二极管显示器）驱动控制专用IC,内部集成有MCU数字接口、 数据锁存器、LED驱动、键盘扫描等电路。本产品质量可靠、稳定性好、抗干扰能力强。主要适用于家电设 备(智能热水器、微波炉、洗衣机、空调、电磁炉)、机顶盒、电子称、智能电表等数码管或LED显示设备。
+TM1638是一种带键盘扫描接口的LED（发光二极管显示器）驱动控制专用IC,内部集成有MCU数字接口、 数据锁存器、LED驱动、键盘扫描等电路。本产品质量可靠、稳定性好、抗干扰能力强。主要适用于家电设备(智能热水器、微波炉、洗衣机、空调、电磁炉)、机顶盒、电子称、智能电表等数码管或LED显示设备。
 
 LibDriver TM1638是LibDriver推出的TM1638的全功能驱动，该驱动提供数码管显示、键盘扫描等功能并且它符合MISRA标准。
 
