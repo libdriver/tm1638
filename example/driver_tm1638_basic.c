@@ -122,9 +122,9 @@ uint8_t tm1638_basic_init(void)
 
 /**
  * @brief     basic example write
- * @param[in] addr is the start address
- * @param[in] *data points to a data buffer
- * @param[in] len is the data length
+ * @param[in] addr start address
+ * @param[in] *data pointer to a data buffer
+ * @param[in] len data length
  * @return    status code
  *            - 0 success
  *            - 1 write failed
@@ -209,7 +209,7 @@ uint8_t tm1638_basic_display_off(void)
 
 /**
  * @brief      basic example read
- * @param[out] *segk points to a segk buffer
+ * @param[out] *segk pointer to a segk buffer
  * @return     status code
  *             - 0 success
  *             - 1 read failed
