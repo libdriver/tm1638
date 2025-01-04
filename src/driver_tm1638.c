@@ -57,7 +57,7 @@
 
 /**
  * @brief     high low shift
- * @param[in] data is the input data
+ * @param[in] data input data
  * @return    output data
  * @note      none
  */
@@ -74,10 +74,10 @@ static uint8_t a_high_low_shift(uint8_t data)
 
 /**
  * @brief     spi write
- * @param[in] *handle points to a tm1638 handle structure
- * @param[in] cmd is the set command
- * @param[in] *buf points to a data buffer 
- * @param[in] len is the buffer length
+ * @param[in] *handle pointer to a tm1638 handle structure
+ * @param[in] cmd set command
+ * @param[in] *buf pointer to a data buffer 
+ * @param[in] len buffer length
  * @return    status code
  *            - 0 success
  *            - 1 write failed
@@ -106,10 +106,10 @@ static uint8_t a_tm1638_write(tm1638_handle_t *handle, uint8_t cmd, uint8_t *buf
 
 /**
  * @brief      spi read
- * @param[in]  *handle points to a tm1638 handle structure
- * @param[in]  cmd is the set command
- * @param[out] *buf points to a data buffer 
- * @param[in]  len is the buffer length
+ * @param[in]  *handle pointer to a tm1638 handle structure
+ * @param[in]  cmd set command
+ * @param[out] *buf pointer to a data buffer 
+ * @param[in]  len buffer length
  * @return     status code
  *             - 0 success
  *             - 1 read failed
@@ -133,7 +133,7 @@ static uint8_t a_tm1638_read(tm1638_handle_t *handle, uint8_t cmd, uint8_t *buf,
 
 /**
  * @brief     initialize the chip
- * @param[in] *handle points to a tm1638 handle structure
+ * @param[in] *handle pointer to a tm1638 handle structure
  * @return    status code
  *            - 0 success
  *            - 1 spi initialization failed
@@ -197,7 +197,7 @@ uint8_t tm1638_init(tm1638_handle_t *handle)
 
 /**
  * @brief     close the chip
- * @param[in] *handle points to a tm1638 handle structure
+ * @param[in] *handle pointer to a tm1638 handle structure
  * @return    status code
  *            - 0 success
  *            - 1 spi deinit failed
@@ -244,8 +244,8 @@ uint8_t tm1638_deinit(tm1638_handle_t *handle)
 
 /**
  * @brief     set pulse width
- * @param[in] *handle points to a tm1638 handle structure
- * @param[in] width is the pulse width
+ * @param[in] *handle pointer to a tm1638 handle structure
+ * @param[in] width pulse width
  * @return    status code
  *            - 0 success
  *            - 1 set pulse width failed
@@ -283,8 +283,8 @@ uint8_t tm1638_set_pulse_width(tm1638_handle_t *handle, tm1638_pulse_width_t wid
 
 /**
  * @brief      get pulse width
- * @param[in]  *handle points to a tm1638 handle structure
- * @param[out] *width points to a pulse width buffer
+ * @param[in]  *handle pointer to a tm1638 handle structure
+ * @param[out] *width pointer to a pulse width buffer
  * @return     status code
  *             - 0 success
  *             - 2 handle is NULL
@@ -309,8 +309,8 @@ uint8_t tm1638_get_pulse_width(tm1638_handle_t *handle, tm1638_pulse_width_t *wi
 
 /**
  * @brief     enable or disable display
- * @param[in] *handle points to a tm1638 handle structure
- * @param[in] enable is a bool value
+ * @param[in] *handle pointer to a tm1638 handle structure
+ * @param[in] enable bool value
  * @return    status code
  *            - 0 success
  *            - 1 set display failed
@@ -348,8 +348,8 @@ uint8_t tm1638_set_display(tm1638_handle_t *handle, tm1638_bool_t enable)
 
 /**
  * @brief      get display status
- * @param[in]  *handle points to a tm1638 handle structure
- * @param[out] *enable points to a bool value buffer
+ * @param[in]  *handle pointer to a tm1638 handle structure
+ * @param[out] *enable pointer to a bool value buffer
  * @return     status code
  *             - 0 success
  *             - 2 handle is NULL
@@ -374,8 +374,8 @@ uint8_t tm1638_get_display(tm1638_handle_t *handle, tm1638_bool_t *enable)
 
 /**
  * @brief     set address mode
- * @param[in] *handle points to a tm1638 handle structure
- * @param[in] mode is the address mode
+ * @param[in] *handle pointer to a tm1638 handle structure
+ * @param[in] mode address mode
  * @return    status code
  *            - 0 success
  *            - 1 set address mode failed
@@ -413,8 +413,8 @@ uint8_t tm1638_set_address_mode(tm1638_handle_t *handle, tm1638_address_mode_t m
 
 /**
  * @brief      get address mode
- * @param[in]  *handle points to a tm1638 handle structure
- * @param[out] *mode points to an address mode buffer
+ * @param[in]  *handle pointer to a tm1638 handle structure
+ * @param[out] *mode pointer to an address mode buffer
  * @return     status code
  *             - 0 success
  *             - 2 handle is NULL
@@ -439,8 +439,8 @@ uint8_t tm1638_get_address_mode(tm1638_handle_t *handle, tm1638_address_mode_t *
 
 /**
  * @brief     enable or disable test mode
- * @param[in] *handle points to a tm1638 handle structure
- * @param[in] enable is a bool value
+ * @param[in] *handle pointer to a tm1638 handle structure
+ * @param[in] enable bool value
  * @return    status code
  *            - 0 success
  *            - 1 set test mode failed
@@ -478,8 +478,8 @@ uint8_t tm1638_set_test_mode(tm1638_handle_t *handle, tm1638_bool_t enable)
 
 /**
  * @brief      get test mode status
- * @param[in]  *handle points to a tm1638 handle structure
- * @param[out] *enable points to a bool value buffer
+ * @param[in]  *handle pointer to a tm1638 handle structure
+ * @param[out] *enable pointer to a bool value buffer
  * @return     status code
  *             - 0 success
  *             - 2 handle is NULL
@@ -504,7 +504,7 @@ uint8_t tm1638_get_test_mode(tm1638_handle_t *handle, tm1638_bool_t *enable)
 
 /**
  * @brief     clear segment
- * @param[in] *handle points to a tm1638 handle structure
+ * @param[in] *handle pointer to a tm1638 handle structure
  * @return    status code
  *            - 0 success
  *            - 1 clear segment failed
@@ -588,10 +588,10 @@ uint8_t tm1638_clear_segment(tm1638_handle_t *handle)
 
 /**
  * @brief     write segment
- * @param[in] *handle points to a tm1638 handle structure
- * @param[in] addr is the start address
- * @param[in] *data points to a data buffer
- * @param[in] len is the data length
+ * @param[in] *handle pointer to a tm1638 handle structure
+ * @param[in] addr start address
+ * @param[in] *data pointer to a data buffer
+ * @param[in] len data length
  * @return    status code
  *            - 0 success
  *            - 1 write segment failed
@@ -681,8 +681,8 @@ uint8_t tm1638_write_segment(tm1638_handle_t *handle, uint8_t addr, uint16_t *da
 
 /**
  * @brief      read segment
- * @param[in]  *handle points to a tm1638 handle structure
- * @param[out] *segk points to a segk buffer
+ * @param[in]  *handle pointer to a tm1638 handle structure
+ * @param[out] *segk pointer to a segk buffer
  * @return     status code
  *             - 0 success
  *             - 1 read segment failed
@@ -718,10 +718,10 @@ uint8_t tm1638_read_segment(tm1638_handle_t *handle, uint8_t segk[4])
 
 /**
  * @brief     set the chip register
- * @param[in] *handle points to a tm1638 handle structure
- * @param[in] cmd is the send command
- * @param[in] *data points to a data buffer
- * @param[in] len is the data buffer length
+ * @param[in] *handle pointer to a tm1638 handle structure
+ * @param[in] cmd sent command
+ * @param[in] *data pointer to a data buffer
+ * @param[in] len data buffer length
  * @return    status code
  *            - 0 success
  *            - 1 write failed
@@ -755,10 +755,10 @@ uint8_t tm1638_set_reg(tm1638_handle_t *handle, uint8_t cmd, uint8_t *data, uint
 
 /**
  * @brief      get the chip register
- * @param[in]  *handle points to a tm1638 handle structure
- * @param[in]  cmd is the send command
- * @param[out] *data points to a data buffer
- * @param[in]  len is the data buffer length
+ * @param[in]  *handle pointer to a tm1638 handle structure
+ * @param[in]  cmd sent command
+ * @param[out] *data pointer to a data buffer
+ * @param[in]  len data buffer length
  * @return     status code
  *             - 0 success
  *             - 1 read failed
@@ -792,7 +792,7 @@ uint8_t tm1638_get_reg(tm1638_handle_t *handle, uint8_t cmd, uint8_t *data, uint
 
 /**
  * @brief      get chip's information
- * @param[out] *info points to a tm1638 info structure
+ * @param[out] *info pointer to a tm1638 info structure
  * @return     status code
  *             - 0 success
  *             - 2 handle is NULL
