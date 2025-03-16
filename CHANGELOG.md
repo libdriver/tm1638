@@ -1,3 +1,9 @@
+## 1.0.5 (2025-03-16)
+
+## Bug Fixes
+
+- fix shell errors
+
 ## 1.0.4 (2025-03-10)
 
 ## Bug Fixes
