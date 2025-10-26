@@ -111,10 +111,10 @@ typedef enum
  */
 typedef struct tm1638_handle_s
 {
-    uint8_t (*spi_init)(void);                                            /**< point to a dio_init function address */
-    uint8_t (*spi_deinit)(void);                                          /**< point to a dio_deinit function address */
-    uint8_t (*spi_write)(uint8_t addr, uint8_t *buf, uint16_t len);       /**< point to a dio_write function address */
-    uint8_t (*spi_read)(uint8_t addr, uint8_t *buf, uint16_t len);        /**< point to a dio_read function address */
+    uint8_t (*spi_init)(void);                                            /**< point to a spi_init function address */
+    uint8_t (*spi_deinit)(void);                                          /**< point to a spi_deinit function address */
+    uint8_t (*spi_write)(uint8_t addr, uint8_t *buf, uint16_t len);       /**< point to a spi_write function address */
+    uint8_t (*spi_read)(uint8_t addr, uint8_t *buf, uint16_t len);        /**< point to a spi_read function address */
     void (*delay_ms)(uint32_t ms);                                        /**< point to a delay_ms function address */
     void (*debug_print)(const char *const fmt, ...);                      /**< point to a debug_print function address */
     uint8_t inited;                                                       /**< inited flag */

@@ -70,19 +70,19 @@ We use '\n' to wrap lines.If your serial port assistant displays exceptions (e.g
     tm1638 (-t read | --test=read) [--times=<num>]    
     ```
 
-8. Run tm1638 read function.
+6. Run tm1638 read function.
 
     ```shell
     tm1638 (-e read | --example=read)    
     ```
 
-8. Run tm1638 write function,  address is the start address and the range is 0 - 7.
+7. Run tm1638 write function,  address is the start address and the range is 0 - 7.
 
     ```shell
     tm1638 (-e write | --example=write) [--addr=<address>] [--num=<0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9>]   
     ```
     
-9. Run tm1638 init function.
+8. Run tm1638 init function.
 
     ```shell
     tm1638 (-e init | --example=init)
@@ -92,12 +92,12 @@ We use '\n' to wrap lines.If your serial port assistant displays exceptions (e.g
     ```shell
     tm1638 (-e deinit | --example=deinit)
 
-9. Run tm1638 on function.
+10. Run tm1638 on function.
 
     ```shell
     tm1638 (-e on | --example=on)
 
-9. Run tm1638 off function.
+11. Run tm1638 off function.
 
     ```shell
     tm1638 (-e off | --example=off)
