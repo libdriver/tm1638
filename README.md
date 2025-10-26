@@ -10,7 +10,7 @@
 
 TM1638 is an IC dedicated to LED (light emitting diode display) drive control and equipped with a keypad scan interface. It integrates MCU digital interface, data latch, LED drive, and keypad scanning circuit. This product is reliable in quality, stable in performance and strong in interference resistance. It is mainly used for household electrical appliances (smart water heaters, microwave ovens, washing machines, air conditioners, electric stove), set-top boxes, electronic scale, smart meters and other digital tube or LED display devices.
 
-LibDriver TM1638 is a full-featured driver of TM1638 launched by LibDriver. LibDriver TM1638 provides digital tube display, keypad scanning and other functions. LibDriver is MISRA compliant.
+LibDriver TM1638 is a full-featured driver for TM1638, launched by LibDriver. It provides digital tube display, keypad scanning and additional features. LibDriver is MISRA compliant.
 
 ### Table of Contents
 
